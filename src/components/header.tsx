@@ -43,8 +43,10 @@ const Header = () => {
       </nav>
 
       {/* Logo on the right */}
-      <div className="text-xl font-bold text-purple-700"><img src={logo} width={100} /></div>
-    </header>
+    <Link to='/'>
+    <div className="text-xl font-bold text-purple-700"><img src={logo} width={100} /></div>
+
+    </Link>      </header>
   );
 };
 

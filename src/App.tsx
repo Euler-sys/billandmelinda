@@ -27,9 +27,14 @@ const App: React.FC = () => {
         </Routes>
         <Footer/>
         <Link to="/prize-claim"
-          className="fixed bottom-4 right-4 bg-black text-white px-6 py-3  shadow-lg text-lg font-semibold  hover:bg-blue-800 "
+          className="fixed bottom-4 right-4 bg-black text-white px-3 py-2 mb-4 rounded-full shadow-lg text-sm font-semibold  hover:bg-blue-800 "
         >
           Claim Prize
+        </Link>
+        <Link to="/winners"
+          className="fixed bottom-4 left-4 bg-black text-white px-3 py-2 mb-4 rounded-full shadow-lg text-sm font-semibold  hover:bg-blue-800 "
+        >
+          Check Eligibility
         </Link>
       </div>
     </Router>

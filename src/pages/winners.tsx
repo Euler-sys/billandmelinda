@@ -49,15 +49,15 @@ const Winners = () => {
 
   return (
     <>
-    <div className="max-w-5xl mx-auto mt-12 px-4">
-      <div className="bg-white shadow-xl rounded-xl p-6">
+  <div className="max-w-5xl mx-auto mt-12 px-4">
+  <div className="bg-white shadow-xl rounded-xl p-6">
 
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-          🏆 Recent Winners
-        </h2>
+    <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+      🏆 Recent Winners
+    </h2>
 
-       
-
+    <div className="overflow-x-auto">
+      <div className="min-w-[500px]">
 
 {loading ? (
   <div className="space-y-4">
@@ -92,6 +92,7 @@ const Winners = () => {
         key={winner.id}
         className="flex items-center justify-between border rounded-lg p-4 hover:shadow-md transition"
       >
+
         {/* LEFT SIDE */}
         <div className="flex items-center gap-4">
 
@@ -113,9 +114,9 @@ const Winners = () => {
         {/* RIGHT SIDE */}
         <div className="flex items-center gap-6">
 
-          <div className="text-lg font-semibold text-gray-800">
-            ${winner.amount.toLocaleString()}
-          </div>
+      <div className="text-lg font-semibold text-gray-800 whitespace-nowrap">
+  ${winner.amount.toLocaleString()}
+</div>
 
           <span
             className={`px-3 py-1 text-sm rounded-full ${getStatusColor(
@@ -131,8 +132,12 @@ const Winners = () => {
 
   </div>
 )}
+
       </div>
     </div>
+
+  </div>
+</div>
     <Testimonials/>
     </>
   );

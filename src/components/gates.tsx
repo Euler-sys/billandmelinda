@@ -1,7 +1,14 @@
 import React from "react";
-import { FaHeartbeat, FaSchool, FaBriefcase, FaGlobe, FaLightbulb, FaHandsHelping } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Link } from "react-router-dom";
+import {
+  FaHeartbeat,
+  FaSchool,
+  FaBriefcase,
+  FaGlobe,
+  FaLightbulb,
+  FaHandsHelping,
+} from "react-icons/fa";
 
 const topics = [
   {
@@ -36,7 +43,8 @@ const topics = [
   },
 ];
 
-const cardVariants = {
+// ✅ Framer Motion variants with TypeScript support
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
@@ -57,24 +65,21 @@ const GatesTopicsPage: React.FC = () => {
           {topics.map((topic, index) => (
             <motion.li
               key={index}
-              custom={index}
+              custom={index} // Pass index to variant
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={cardVariants}
               className="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col items-start"
             >
-                <Link to={'/info'} className="flex flex-col w-full h-full">
-                    <div className="mb-4">{topic.icon}</div>
+              <Link to="/info" className="flex flex-col w-full h-full">
+                <div className="mb-4">{topic.icon}</div>
                 <h2 className="text-xl font-semibold mb-2 text-gray-800">{topic.title}</h2>
                 <p className="text-gray-600 mb-4 text-sm">{topic.description}</p>
                 <span className="mt-auto text-blue-700 hover:underline font-medium text-sm">
                   Learn More →
                 </span>
-                
-                </Link>
-         
-         
+              </Link>
             </motion.li>
           ))}
         </ul>

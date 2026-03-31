@@ -11,6 +11,7 @@ import Winners from "./pages/winners";
 import ManageWinners from "./pages/manage";
 import PageLoader from "./components/pageLoader";
 import { FaPhone } from "react-icons/fa";
+import TawkChat from "./components/tawk";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -28,6 +29,8 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="font-sans">
+
+      
       {loading && <PageLoader />}
 
       <Header />
@@ -40,7 +43,7 @@ const AppContent: React.FC = () => {
         <Route path="winners" element={<Winners />} />
         <Route path="admin" element={<ManageWinners />} />
       </Routes>
-
+<TawkChat/>
       <Footer />
 
   {/* Floating Buttons */}
@@ -48,7 +51,7 @@ const AppContent: React.FC = () => {
   {/* Claim Prize (React Router Link) */}
   <Link
     to="/prize-claim"
-    className="fixed bottom-4 right-4 bg-[#bf126e] text-white px-3 py-2 mb-4 rounded-full shadow-lg text-sm font-semibold hover:bg-black z-50"
+    className="fixed bottom-[60px] left-4 bg-[#bf126e] text-white px-3 py-2 mb-4 rounded-full shadow-lg text-sm font-semibold hover:bg-black z-50"
   >
     Claim Prize
   </Link>
@@ -58,7 +61,7 @@ const AppContent: React.FC = () => {
     href={`sms:+13528308271?body=${encodeURIComponent(
       "Hello, I would like to make an enquiry."
     )}`}
-    className="fixed bottom-20 right-4 bg-[#bf126e] text-white p-3 rounded-full shadow-lg hover:bg-black transition z-50 flex items-center justify-center"
+    className="fixed bottom-[130px] right-4 bg-[#bf126e] text-white p-3 rounded-full shadow-lg hover:bg-black transition z-50 flex items-center justify-center"
   >
     <FaPhone className="text-lg" />
   </a>
@@ -70,6 +73,8 @@ const AppContent: React.FC = () => {
       >
         Check Winners List
       </Link>
+
+      
     </div>
   );
 };

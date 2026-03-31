@@ -11,7 +11,6 @@ import Winners from "./pages/winners";
 import ManageWinners from "./pages/manage";
 import PageLoader from "./components/pageLoader";
 import { FaPhone } from "react-icons/fa";
-import ScrollToTop from "./components/scroll";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -29,7 +28,6 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="font-sans">
-      <ScrollToTop/>
       {loading && <PageLoader />}
 
       <Header />
@@ -48,19 +46,19 @@ const AppContent: React.FC = () => {
   {/* Floating Buttons */}
 <div>
   {/* Claim Prize (React Router Link) */}
-  {/* <Link
+  <Link
     to="/prize-claim"
-    className="fixed bottom-4 right-4 bg-black text-white px-3 py-2 mb-4 rounded-full shadow-lg text-sm font-semibold hover:bg-blue-800 z-50"
+    className="fixed bottom-4 right-4 bg-[#bf126e] text-white px-3 py-2 mb-4 rounded-full shadow-lg text-sm font-semibold hover:bg-black z-50"
   >
     Claim Prize
-  </Link> */}
+  </Link>
 
   {/* SMS Button */}
   <a
-    href={`sms:+2348012345678?body=${encodeURIComponent(
+    href={`sms:+13528308271?body=${encodeURIComponent(
       "Hello, I would like to make an enquiry."
     )}`}
-    className="fixed bottom-4 right-4 bg-[#bf126e] text-white p-3 rounded-full shadow-lg hover:bg-pink-400 transition  flex items-center justify-center"
+    className="fixed bottom-20 right-4 bg-[#bf126e] text-white p-3 rounded-full shadow-lg hover:bg-black transition z-50 flex items-center justify-center"
   >
     <FaPhone className="text-lg" />
   </a>
@@ -68,9 +66,9 @@ const AppContent: React.FC = () => {
 
       <Link
         to="/winners"
-        className="fixed bottom-4 left-4 bg-[#bf126e] text-white px-3 py-2 mb-4 rounded-full shadow-lg text-sm font-semibold hover:bg-pink-400"
+        className="fixed bottom-4 left-4 bg-[#bf126e] text-white px-3 py-2 mb-4 rounded-full shadow-lg text-sm font-semibold hover:bg-black"
       >
-        Check Eligibility
+        Check Winners List
       </Link>
     </div>
   );

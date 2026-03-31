@@ -12,6 +12,7 @@ import ManageWinners from "./pages/manage";
 import PageLoader from "./components/pageLoader";
 import { FaPhone } from "react-icons/fa";
 import TawkChat from "./components/tawk";
+import GrantInfoPage from "./pages/bmgfinfo";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -38,6 +39,7 @@ const AppContent: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<AboutUs />} />
+        <Route path="info" element={<GrantInfoPage />} />
         <Route path="prize-claim" element={<ClaimWinnings />} />
         <Route path="contact" element={<ContactUs />} />
         <Route path="winners" element={<Winners />} />

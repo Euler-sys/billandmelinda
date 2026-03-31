@@ -3,6 +3,8 @@ import { FaMale, FaFemale } from "react-icons/fa";
 import Testimonials from "../components/testimonial";
 import ImpactSection from "../components/ompact";
 import About from "../components/about";
+import ScrollToTop from "../components/scroll";
+
 
 const JSONBIN_URL = "https://api.jsonbin.io/v3/b/69cb7f01856a682189e597ae";
 const JSONBIN_API_KEY =
@@ -55,7 +57,7 @@ const Winners = () => {
       <div className="max-w-5xl mx-auto mt-12 px-4">
         <div className="bg-white shadow-xl rounded-xl p-6">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-            🏆 Recent Winners
+        Winners List
           </h2>
 
           <div className="overflow-x-auto">
@@ -86,46 +88,46 @@ const Winners = () => {
               ) : winners.length === 0 ? (
                 <p className="text-center text-gray-500">No winners yet</p>
               ) : (
-                <div className="space-y-4">
-                  {winners.map((winner) => (
-                    <div
-                      key={winner.id}
-                      className="flex items-center justify-between border rounded-lg p-4 hover:shadow-md transition"
-                    >
-                      {/* LEFT SIDE */}
-                      <div className="flex items-center gap-4">
-                        <div className="text-2xl text-gray-600">
-                          {winner.gender === "Male" ? <FaMale /> : <FaFemale />}
-                        </div>
+                <div className="space-y-2">
+  {winners.map((winner) => (
+    <div
+      key={winner.id}
+      className="flex items-center justify-between border rounded-lg p-3 hover:shadow-md transition"
+    >
+      {/* LEFT SIDE */}
+      <div className="flex items-center gap-2">
+        <div className="text-xl text-gray-600">
+          {winner.gender === "Male" ? <FaMale /> : <FaFemale />}
+        </div>
 
-                        <div>
-                          <p className="font-semibold text-gray-800">
-                            {winner.fullName}
-                          </p>
+        <div className="leading-tight">
+          <p className="font-semibold text-gray-800 text-sm">
+            {winner.fullName}
+          </p>
 
-                          <p className="text-sm text-gray-500">
-                            {winner.address}
-                          </p>
-                        </div>
-                      </div>
+          <p className="text-xs text-gray-500">
+            {winner.address}
+          </p>
+        </div>
+      </div>
 
-                      {/* RIGHT SIDE */}
-                      <div className="flex items-center gap-6">
-                        <div className="text-lg font-semibold text-gray-800 whitespace-nowrap">
-                          ${winner.amount.toLocaleString()}
-                        </div>
+      {/* RIGHT SIDE */}
+      <div className="flex items-center gap-2">
+        <div className="text-sm font-semibold text-gray-800 whitespace-nowrap">
+          ${winner.amount.toLocaleString()}
+        </div>
 
-                        <span
-                          className={`px-3 py-1 text-sm rounded-full ${getStatusColor(
-                            winner.status,
-                          )}`}
-                        >
-                          {winner.status}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+        <span
+          className={`px-2 py-0.5 text-xs rounded-full ${getStatusColor(
+            winner.status,
+          )}`}
+        >
+          {winner.status}
+        </span>
+      </div>
+    </div>
+  ))}
+</div>
               )}
             </div>
           </div>
@@ -133,6 +135,7 @@ const Winners = () => {
       </div>
       <ImpactSection />
       <About />
+      <ScrollToTop/>
       <Testimonials />
     </>
   );

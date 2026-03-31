@@ -1,8 +1,8 @@
 import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
 import { useMemo } from "react";
-import video from "../assets/aboutus.mp4";
+// import video from "../assets/aboutus.mp4";
 
 const testimonials = [
   {
@@ -77,7 +77,7 @@ const Testimonials = () => {
   return (
     <div className="bg-gray-100 py-12">
       {/* Video Section */}
-      <div className="w-full max-w-4xl mx-auto mb-8 rounded-lg shadow-lg overflow-hidden">
+      {/* <div className="w-full max-w-4xl mx-auto mb-8 rounded-lg shadow-lg overflow-hidden">
         <ReactPlayer
           url={video}
           playing
@@ -87,7 +87,7 @@ const Testimonials = () => {
           width="100%"
           height="400px"
         />
-      </div>
+      </div> */}
 
       {/* Heading */}
       <motion.h2

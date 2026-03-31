@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-const JSONBIN_URL = "https://api.jsonbin.io/v3/b/67e2b20a8a456b79667c41b7";
-const JSONBIN_API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.";
+const JSONBIN_URL = "https://api.jsonbin.io/v3/b/69cb7f01856a682189e597ae";
+const JSONBIN_API_KEY =
+  "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.";
 
 interface Winner {
   id: number;
@@ -83,7 +84,7 @@ const ManageWinners = () => {
 
   const handleUpdateWinner = async () => {
     const updatedWinners = winners.map((winner) =>
-      winner.id === editingId ? newWinner : winner
+      winner.id === editingId ? newWinner : winner,
     );
 
     try {

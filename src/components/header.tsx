@@ -28,7 +28,7 @@ const Header = () => {
           <Link to="/" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>About Us</Link>
           <Link to="/winners" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Winners List</Link>
-          <Link to="/prize-claim" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Prize Claim</Link>
+          {/* <Link to="/prize-claim" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Prize Claim</Link> */}
           <Link to="/contact" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Contact Us</Link>
         </div>
       )}
@@ -38,7 +38,7 @@ const Header = () => {
         <Link to="/" className="hover:text-purple-600">Home</Link>
         <Link to="/about" className="hover:text-purple-600">About Us</Link>
         <Link to="/winners" className="hover:text-purple-600">Winners List</Link>
-        <Link to="/prize-claim" className="hover:text-purple-600">Prize Claim</Link>
+        {/* <Link to="/prize-claim" className="hover:text-purple-600">Prize Claim</Link> */}
         <Link to="/contact" className="hover:text-purple-600">Contact Us</Link>
       </nav>
 
